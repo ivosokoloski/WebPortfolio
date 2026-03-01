@@ -1,0 +1,228 @@
+/* Обвивка за целата содржина десно */
+.main-content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-block {
+    margin-bottom: 60px;
+}
+
+.block-title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Линија после насловот за модерен изглед */
+.block-title::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background: linear-gradient(90deg, var(--accent-neon), transparent);
+    opacity: 0.3;
+}
+
+/* --- EDUCATION STYLE --- */
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колони на компјутер */
+    gap: 20px;
+}
+
+.education-card {
+    background: rgba(13, 17, 23, 0.6);
+    border: 1px solid var(--accent-dim);
+    padding: 25px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.education-card:hover {
+    border-color: var(--accent-neon);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 209, 0.05);
+}
+
+.badge {
+    color: var(--accent-neon);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.education-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.institution {
+    color: var(--accent-neon);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* --- FOCUS STYLE --- */
+.focus-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.focus-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: var(--bg-sidebar);
+    padding: 20px;
+    border-left: 4px solid var(--accent-dim);
+    transition: 0.3s;
+}
+
+.focus-item:hover {
+    border-left-color: var(--accent-neon);
+    background: rgba(0, 255, 209, 0.02);
+}
+
+.focus-icon-box {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.focus-details h4 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.focus-details p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+.focus-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.focus-list li {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.4;
+}
+
+/* Мала неонска цртка пред секоја точка од листата */
+.focus-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 1px;
+    background: var(--accent-neon);
+    box-shadow: 0 0 5px var(--accent-neon);
+}
+
+.focus-item:hover .focus-list li {
+    opacity: 1;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgba(13, 17, 23, 0.4);
+    border: 1px solid var(--accent-dim);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    border-color: var(--accent-neon);
+    background: rgba(0, 255, 209, 0.02);
+    box-shadow: 0 0 20px rgba(0, 255, 209, 0.05);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 10px;
+}
+
+.skill-icon {
+    font-size: 1.2rem;
+}
+
+.skill-header h3 {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Стил за таговите (чипови) */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-color);
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
+
+.skill-card:hover .skill-tags span {
+    border-color: rgba(0, 255, 209, 0.2);
+}
+
+.skill-tags span:hover {
+    background: var(--accent-neon);
+    color: var(--bg-dark);
+    border-color: var(--accent-neon);
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .education-grid {
+        grid-template-columns: 1fr; /* Една колона на мобилен */
+    }
+}

@@ -1,0 +1,161 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(13, 17, 23, 0.7);
+    border: 1px solid var(--accent-dim);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+    border-color: var(--accent-neon);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 255, 209, 0.1);
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-category {
+    color: var(--accent-neon);
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-card h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 5px 0 15px 0;
+}
+
+.project-description {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 25px;
+    min-height: 70px; /* За изднадначеност на картичките */
+}
+
+/* Технологии користени во проектот */
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.project-tech-stack span {
+    font-size: 0.7rem;
+    color: var(--accent-neon);
+    background: rgba(0, 255, 209, 0.05);
+    padding: 4px 10px;
+    border: 1px solid rgba(0, 255, 209, 0.2);
+}
+
+/* Линкови */
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--accent-neon);
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    color: var(--accent-neon);
+    gap: 15px; /* Мала анимација на поместување */
+}
+
+.link-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Декоративна линија на дното која светнува на hover */
+.project-accent-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-neon);
+    transition: 0.4s ease;
+}
+
+.project-card:hover .project-accent-line {
+    width: 100%;
+}
+.main-outro {
+  margin: 100px auto 60px auto; /* Големо растојание одозгора за да дише */
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Вертикална линија која паѓа од горе (за разлика од почетокот каде беше лево) */
+.outro-line {
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--accent-neon), transparent);
+  box-shadow: 0 0 10px var(--accent-neon);
+  margin-bottom: 30px;
+}
+
+.outro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.outro-text strong {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 255, 209, 0.3);
+}
+
+/* Копчето на средина */
+.outro-action {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-minimal {
+  padding: 12px 35px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--accent-neon);
+  border: 1px solid var(--accent-neon);
+  background: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-minimal:hover {
+  background: var(--accent-neon);
+  color: var(--bg-dark);
+  box-shadow: 0 0 30px rgba(0, 255, 209, 0.4);
+  transform: translateY(-5px);
+}

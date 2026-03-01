@@ -1,0 +1,240 @@
+/* 1. ОСНОВНИ РЕСЕТИ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden; /* Спречува хоризонтално скролање */
+}
+
+/* 2. ГЛАВЕН КОНТЕЈНЕР (Flex на компјутер) */
+.app-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* 3. ABOUT СЕКЦИЈА (ЛЕВО - 20%) */
+.about-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    background-color: #1919235d;
+    padding: 40px 20px;
+    border-right: 1px solid rgba(100, 255, 218, 0.3);
+    z-index: 100;
+    overflow-y: auto;
+    transition: left 0.4s ease; /* Анимација за мобилен */
+}
+
+/* 4. MAIN КОНТЕЈНЕР (ДЕСНО - 80%) */
+.main-container {
+    width: 80%;
+    margin-left: 20%; /* Го поместува Main десно за 20% */
+    min-height: 100vh;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5. HEADER / NAVIGATION (СКРИЕНО ДЕСНО) */
+.site-header {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Скриено */
+    width: 300px;
+    height: 100vh;
+    background: #112240;
+    z-index: 1000;
+    transition: right 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+}
+
+.site-header.active {
+    right: 0; /* Се појавува со клик */
+}
+
+/* 6. КОПЧИЊА (Toggle Buttons) */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: #64ffda;
+    color: #0a192f;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.about-mobile-btn {
+    display: none; /* Скриено на компјутер */
+}
+
+/* 7. RESPONSIVE - ТЕЛЕФОН (Под 768px) */
+@media (max-width: 768px) {
+    .app-container {
+        display: block; /* Го прекинуваме Flex-от за да нема туркање */
+    }
+
+    /* Main сега зафаќа 100% и нема маргина лево */
+    .main-container {
+        width: 100%;
+        margin-left: 0; 
+        padding: 80px 20px 40px 20px; /* Повеќе простор горе заради копчињата */
+    }
+
+    /* About станува скриен "Drawer" од лево */
+    .about-section {
+        padding-top: 0%;
+        width: 280px; /* Фиксна широчина на мобилен */
+        left: -280px; /* Скриен надвор од екран */
+        z-index: 2000;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Кога ќе кликнеш "За Мене" на телефон */
+    .about-section.mobile-active {
+        left: 0;
+    }
+
+    .about-mobile-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 3001;
+
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    /* Насловите да не се преголеми на мобилен */
+    h2 {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* 8. ВНАТРЕШНИ СТИЛОВИ ЗА СОДРЖИНА */
+
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+:root {
+  --bg-dark: #05070a;      /* Длабока црна */
+  --bg-sidebar: #0d1117;   /* Челично темна */
+  --accent-neon: #00ffd1;  /* Остра тиркизна (помашка од лимета) */
+  --accent-dim: #1f2937;   /* Темен метал */
+  --text-color: #c9d1d9;   /* Светло сива (не е виолетова) */
+}
+
+/* Глобално */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif; /* Почист и поостар фонт */
+}
+
+/* About Секцијата */
+.about-section {
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--accent-dim); /* Солидна линија наместо испрекината */
+}
+
+/* Фиксираниот About-text со "Smoked Glass" ефект */
+.about-text {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 30px 20px;
+  /* Потемно стакло */
+  background: rgba(13, 17, 23, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--accent-neon);
+}
+
+.about-text h3 {
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  /* Посилен, ладен сјај */
+  text-shadow: 0 0 15px rgba(0, 255, 209, 0.3);
+}
+
+.about-text p {
+  color: var(--accent-neon);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* Личните инфо - вредностите да бидат остри */
+.about-personal-info span {
+  color: var(--accent-neon);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+}
+
+/* Копчето за мени - Остро и индустриско */
+.menu-toggle {
+  background: var(--accent-neon);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 4px; /* Квадратно со многу малку заоблени ќошиња */
+  width: 45px;
+  height: 45px;
+  font-weight: 900;
+  box-shadow: 0 0 15px rgba(0, 255, 209, 0.4);
+  transition: 0.2s ease-in-out;
+}
+
+.menu-toggle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 255, 209, 0.6);
+}
+
+/* Мрежа (Grid) во позадина - потемна и посериозна */
+.main-container {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Скролбарот (бидејќи го сокривме, но ако сакаш стилизиран) */
+.about-section::-webkit-scrollbar {
+  width: 3px;
+}
+.about-section::-webkit-scrollbar-thumb {
+  background: var(--accent-neon);
+}
+.site-header{
+   background-color: var(--bg-sidebar);
+  border-left: 1px solid var(--accent-dim);
+}
