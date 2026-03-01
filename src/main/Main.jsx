@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Main.css";
-import pfpImage from '../../public/images/pfpFinal.jpg';
+import pfpImage from '../assets/pfpFinal.jpg';
 export function Main() {
   useEffect(() => {
     let textBox = document.getElementById("main-text-auto-type");
