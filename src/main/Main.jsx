@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Main.css";
+import pfpImage from '../../public/images/pfpFinal.jpg';
 export function Main() {
   useEffect(() => {
     let textBox = document.getElementById("main-text-auto-type");
@@ -31,7 +32,7 @@ export function Main() {
         <div class="main-photo">
           <img
             className="main-img"
-            src="../../public/images/pfpFinal.jpg"
+            src={pfpImage}
           ></img>
         </div>
       </div>
