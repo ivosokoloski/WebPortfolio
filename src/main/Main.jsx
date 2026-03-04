@@ -6,7 +6,7 @@ export function Main() {
   useEffect(() => {
     let textBox = document.getElementById("main-text-auto-type");
     const text =
-      "Hello I'm Ivo Sokoloski A student of Computer science and Engineering";
+      "Hello I'm Ivo Sokoloski A student of Computer Science and Engineering";
     let i = 0;
     if (textBox) textBox.innerHTML = "";
     let interval = setInterval(() => {
