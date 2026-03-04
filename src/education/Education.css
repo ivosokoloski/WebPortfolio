@@ -1,4 +1,4 @@
-/* Обвивка за целата содржина десно */
+
 .main-content-wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -20,7 +20,7 @@
     gap: 15px;
 }
 
-/* Линија после насловот за модерен изглед */
+
 .block-title::after {
     content: "";
     height: 1px;
@@ -29,10 +29,10 @@
     opacity: 0.3;
 }
 
-/* --- EDUCATION STYLE --- */
+
 .education-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Две колони на компјутер */
+    grid-template-columns: 1fr 1fr; 
     gap: 20px;
 }
 
@@ -79,7 +79,6 @@
     opacity: 0.8;
 }
 
-/* --- FOCUS STYLE --- */
 .focus-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -136,7 +135,6 @@
     line-height: 1.4;
 }
 
-/* Мала неонска цртка пред секоја точка од листата */
 .focus-list li::before {
     content: "";
     position: absolute;
@@ -191,7 +189,7 @@
     letter-spacing: 1px;
 }
 
-/* Стил за таговите (чипови) */
+
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
@@ -220,9 +218,9 @@
     font-weight: bold;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
     .education-grid {
-        grid-template-columns: 1fr; /* Една колона на мобилен */
+        grid-template-columns: 1fr; 
     }
 }

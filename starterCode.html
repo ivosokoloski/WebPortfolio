@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Моето професионално веб портфолио">
+    <title>Име Презиме | Веб Портфолио</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">МоеПортфолио<span>.</span></a>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Почетна</a></li>
+                    <li><a href="#about">За мене</a></li>
+                    <li><a href="#projects">Проекти</a></li>
+                    <li><a href="#contact">Контакт</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="home" class="hero-section">
+            <div class="container">
+                <p class="greeting">Здраво, моето име е</p>
+                <h1 class="hero-title">[Твоето Име Презиме]</h1>
+                <h2 class="hero-subtitle">Јас градам работи за вебот.</h2>
+                <p class="hero-description">
+                    Јас сум софтверски инженер / веб дизајнер фокусиран на градење (и повремено дизајнирање) на исклучителни дигитални искуства.
+                </p>
+                <a href="#projects" class="btn btn-primary">Види ги моите проекти</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">За мене</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Тука можеш да напишеш кратка биографија. Кога почна да кодираш, што те мотивира и со кои технологии работиш моментално.</p>
+                        <ul class="skills-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>HTML & CSS</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="profile-placeholder.jpg" alt="Моја фотографија">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Некои од моите проекти</h2>
+                
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="project1-placeholder.jpg" alt="Проект 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Име на Проект 1</h3>
+                            <p>Апликација која помага при менаџирање на времето. Изработена за да го олесни секојдневниот живот.</p>
+                            <ul class="project-tech">
+                                <li>React</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="project2-placeholder.jpg" alt="Проект 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Име на Проект 2</h3>
+                            <p>E-commerce платформа со целосна интеграција за плаќање и кориснички панели.</p>
+                            <ul class="project-tech">
+                                <li>Node.js</li>
+                                <li>MongoDB</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container text-center">
+                <h2 class="section-title">Што е следно?</h2>
+                <h3 class="contact-heading">Стапи во контакт</h3>
+                <p class="contact-text">
+                    Моето сандаче е секогаш отворено. Без разлика дали имаш прашање, предлог за работа или само сакаш да кажеш здраво, ќе се потрудам да ти вратам!
+                </p>
+                <a href="mailto:tvojot@email.com" class="btn btn-outline">Кажи Здраво</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="#" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" target="_blank" aria-label="Twitter">Twitter</a>
+            </div>
+            <p class="copyright">&copy; 2026 Твоето Име. Дизајнирано и изработено од мене.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
