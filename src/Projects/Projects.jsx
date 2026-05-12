@@ -274,6 +274,8 @@ export function Projects() {
           <div className="project-accent-line"></div>
         </div>
 
+      </div>
+
       <section className="main-outro">
         <div className="outro-line"></div>
         <p className="outro-text">
@@ -294,5 +296,7 @@ export function Projects() {
         </div>
       </section>
     </section>
+
   );
+
 }
