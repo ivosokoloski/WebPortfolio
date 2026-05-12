@@ -27,7 +27,7 @@ export function Projects() {
             </div>
             <div className="project-links">
               <a
-                href="https://github.com/ivosokoloski/sportiva-backend"
+                href="https://github.com/ivosokoloski/sportiva-base"
                 target="_blank"
                 rel="noreferrer"
                 className="github-link"
@@ -73,7 +73,7 @@ export function Projects() {
             </div>
             <div className="project-links">
               <a
-                href="https://github.com/ivosokoloski/bookshop-backend"
+                href="https://github.com/ivosokoloski/books-eshop-frontend"
                 target="_blank"
                 rel="noreferrer"
                 className="github-link"
@@ -229,21 +229,29 @@ export function Projects() {
           <div className="project-accent-line"></div>
         </div>
 
-        {/* --- WordPress Application --- */}
+       {/* --- Data Science Exercises --- */}
         <div className="project-card">
           <div className="project-content">
             <div className="project-header">
-              <span className="project-category">Web Application</span>
-              <h3>WordPress Application</h3>
+              <span className="project-category">Data Science / Machine Learning</span>
+              <h3>Data Science Exercises</h3>
             </div>
             <h4 className="project-description">
-              Built on WordPress using various plugins to enhance functionality
-              and user experience. Focused on providing a dynamic and easily
-              manageable website structure.
+              A comprehensive collection of data analysis and machine learning tasks. 
+              Focused on exploratory data analysis (EDA), predictive modeling, 
+              and practical implementation of core algorithms using Python's data ecosystem.
             </h4>
+            <div className="project-tech-stack">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>Scikit-learn</span>
+              <span>Matplotlib</span>
+              <span>Seaborn</span>
+            </div>
             <div className="project-links">
               <a
-                href="https://github.com/ivosokoloski/wordpressApp"
+                href="https://github.com/ivosokoloski/DataScienceExercises"
                 target="_blank"
                 rel="noreferrer"
                 className="github-link"
@@ -265,7 +273,6 @@ export function Projects() {
           </div>
           <div className="project-accent-line"></div>
         </div>
-      </div>
 
       <section className="main-outro">
         <div className="outro-line"></div>
