@@ -3,7 +3,6 @@ import "./Education.css";
 export function Education() {
   return (
     <div className="main-content-wrapper">
-     
       <section id="education" className="info-block">
         <h2 className="block-title">Education</h2>
         <div className="education-grid">
@@ -35,11 +34,9 @@ export function Education() {
         </div>
       </section>
 
-    
       <section className="info-block">
         <h2 className="block-title">Current Focus</h2>
         <div className="focus-container">
-          
           <div className="focus-item">
             <div className="focus-icon-box">⚡</div>
             <div className="focus-details">
@@ -51,28 +48,42 @@ export function Education() {
             </div>
           </div>
 
-         
-          <div className="focus-item">
-            <div className="focus-icon-box">🚀</div>
-            <div className="focus-details">
-              <h4>Professional Growth</h4>
-              <ul className="focus-list">
-                <li>Continuous improvement of programming skills</li>
-                <li>Working on real and practical projects</li>
+          <div className="focus-container">
+            <div className="focus-item">
+              <div className="focus-icon-box">🚀</div>
+              <div className="focus-details">
+                <h4>Professional Growth</h4>
+                <ul className="focus-list">
+                  <li>Continuous improvement of programming skills</li>
+                  <li>Working on real and practical projects</li>
+                  <li>
+                    Preparation for professional development and an industry
+                    career
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-                <li>
-                  Preparation for professional development and an industry
-                  career
-                </li>
-              </ul>
+            <div className="focus-item">
+              <div className="focus-icon-box">🤖</div>
+              <div className="focus-details">
+                <h4>Data Science & Machine Learning</h4>
+                <ul className="focus-list">
+                  <li>
+                    Developing advanced AI models and Deep Learning solutions
+                  </li>
+                  <li>Mastering Generative AI and RAG architectures</li>
+                  <li>Data-driven problem solving and predictive analytics</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section id="skills" className="info-block">
         <h2 className="block-title">Technical Skills</h2>
-        <div  className="skills-grid">
-          
+        <div className="skills-grid">
+          {/* Programming */}
           <div className="skill-card">
             <div className="skill-header">
               <span className="skill-icon">⌨️</span>
@@ -80,11 +91,12 @@ export function Education() {
             </div>
             <div className="skill-tags">
               <span>C++</span> <span>Java</span> <span>C#</span>
-              <span>JavaScript</span> <span>Bash</span> <span>Python</span>
+              <span>JavaScript</span> <span>TypeScript</span> <span>Bash</span>{" "}
+              <span>Python</span>
             </div>
           </div>
 
-          
+          {/* Web Technologies */}
           <div className="skill-card">
             <div className="skill-header">
               <span className="skill-icon">🌐</span>
@@ -92,12 +104,12 @@ export function Education() {
             </div>
             <div className="skill-tags">
               <span>HTML</span> <span>CSS</span> <span>React</span>
-              <span>Fetch API</span> <span>jQuery</span> <span>anime.js</span>
-              <span>WordPress</span>
+              <span>Vanilla JS</span> <span>Fetch API</span> <span>jQuery</span>
+              <span>anime.js</span> <span>WordPress</span>
             </div>
           </div>
 
-         
+          {/* Backend & Frameworks */}
           <div className="skill-card">
             <div className="skill-header">
               <span className="skill-icon">⚙️</span>
@@ -105,22 +117,36 @@ export function Education() {
             </div>
             <div className="skill-tags">
               <span>Spring Boot</span> <span>Spring MVC</span>
-              <span>Spring Security</span> <span>.NET MVC</span>{" "}
-              <span>ASP.NET</span>
+              <span>Spring Security</span> <span>Django</span>{" "}
+              <span>.NET MVC</span>
+              <span>ASP.NET MVC</span>
             </div>
           </div>
 
-         
+          {/* Data Science & Machine Learning */}
+          <div className="skill-card">
+            <div className="skill-header">
+              <span className="skill-icon">📊</span>
+              <h3>Data Science & ML</h3>
+            </div>
+            <div className="skill-tags">
+              <span>PyTorch</span> <span>Scikit-learn</span> <span>Pandas</span>
+              <span>NumPy</span> <span>Matplotlib</span> <span>Seaborn</span>
+              <span>RAG</span> <span>Transformers</span> <span>CNN</span>{" "}
+              <span>LSTM</span>
+            </div>
+          </div>
+
+          {/* Databases & Tools */}
           <div className="skill-card">
             <div className="skill-header">
               <span className="skill-icon">🛠️</span>
               <h3>Databases & Tools</h3>
             </div>
             <div className="skill-tags">
-              <span>PostgreSQL</span> <span>SQL</span> <span>Git</span>
-              <span>Visual Studio</span> <span>IntelliJ</span>{" "}
-              <span>Pandas</span>
-              <span>NumPy</span>
+              <span>PostgreSQL</span> <span>SQL</span> <span>Docker</span>
+              <span>Git</span> <span>Visual Studio</span> <span>IntelliJ</span>
+              <span>Jupyter</span>
             </div>
           </div>
         </div>
