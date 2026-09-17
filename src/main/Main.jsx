@@ -41,9 +41,10 @@ export function Main() {
               <span className="btn-icon">✉️</span> Contact Me
             </a>
             <a
-              href="/Ivo_Sokoloski_CV_en.pdf"
+              href="https://github.com/ivosokoloski/ivosokoloski/blob/main/Ivo_Sokoloski_CV.pdf"
               className="btn-secondary"
-              download="Ivo_Sokoloski_CV.pdf"
+              target="_blank"  
+              rel="noreferrer"
             >
               <span className="btn-icon">📄</span> Download CV
             </a>

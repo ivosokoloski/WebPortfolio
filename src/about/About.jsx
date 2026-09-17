@@ -107,7 +107,7 @@ export function About() {
                 Education<span>FCSE UKIM</span>
               </p>
               <p>
-                Year of study<span>Third</span>
+                Year of study<span>Fourth</span>
               </p>
             </div>
             <div className="about-tech">
